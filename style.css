@@ -38,7 +38,7 @@ nav a {
     text-decoration: none;
     padding: 8px 16px;
     transition: background-color 0.3s;
-}
+}            
 
 nav a:hover {
     background-color: rgba(0, 0, 0, 0, 0.1);
@@ -49,8 +49,19 @@ main {
     padding: 20px;
     min-height: calc(100vh - 100px); /* 保证主要内容区域至少占据可视窗口高度 */
 }
+/* 新增样式 */
+.welcome-message {
+    text-align: center; /* 使<h2>居中 */
+    margin-bottom: 20px; /* 添加底部外边距，以与其他内容区分 */
+}
+
+/* 已有样式中的调整 */
+#welcome p { /* 添加段落缩进 */
+    text-indent: 2em; /* 2em为一个标准的段落缩进量，可根据需要调整 */
+}
 
 .button {
+    /* 移除固定定位相关属性 */
     display: inline-block;
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -58,10 +69,16 @@ main {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-    float: right; /* 将按钮右浮动 */
-    margin-right: 20px; /* 可以调整右边距 */
+	
+    /* 无需额外定位或外边距，Flexbox 自动处理 */
 }
-
+/* 为了优化移动端体验，可以考虑在小屏设备上调整样式 */
+@media (max-width: 600px) {
+    .button {
+        width: 80vw; /* 在较小的屏幕上，可能需要调整宽度以保持良好的用户体验 */
+        min-width: auto; /* 或者根据需要调整最小宽度 */
+    }
+}
 .button:hover {
     background-color: #45a049;
 }
