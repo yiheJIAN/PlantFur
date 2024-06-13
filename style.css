@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+  h3 {
+        font-style: italic;
+    }
+	
 body {
     font-family: Arial, "微软雅黑", sans-serif;
     line-height: 1.6;
@@ -144,7 +148,17 @@ footer p {
 
 .plant-info {
     margin-top: 20px;
+	
 }
+.plant-info ul {
+        list-style-type: disc; /* 设置项目符号类型 */
+        padding-left: 40px; /* 添加左侧内边距以创建缩进 */
+    }
+	
+	.plant-info li {
+	        text-indent: -2em; /* 缩进首行文本，值可能需要根据具体情况调整 */
+	        padding-left: 2em; /* 为文本内容添加左侧内边距，抵消负的text-indent */
+	    }
 
 /* === 探索之旅地图容器样式 === */
 #mapContainer {
